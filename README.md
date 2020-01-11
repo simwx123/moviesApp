@@ -4,7 +4,7 @@ An app for listing trending and popular movies from [moviedb](https://developers
 
 ### Screenshots
 ![popular](https://i.imgur.com/TAY7mJF.png?2)
-![Search Movie](https://i.imgur.com/a/92UPYTU)
+![Search](https://i.imgur.com/rTtsGTq.png?1)
 ![Details](https://i.imgur.com/a/k7rQIbg)
 
 ## Getting started

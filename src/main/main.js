@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Act } from '../actions/types';
 
 const main: FunctionComponent<{}> = props => {
-
+  const myApiKey = '3ff66b47d9d854216aa2e157a15c9835'; //change this to your moviedb api key
   const allMovies = useSelector(state => state.act.allMovies);
   const dispatch = useDispatch();
   const [movies, setAllMovie] = useState([]);
@@ -14,7 +14,7 @@ const main: FunctionComponent<{}> = props => {
   const [errorSearch, setError] = useState('');
 
   const fetchMovies = async () => {
-    let response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=3ff66b47d9d854216aa2e157a15c9835')
+    let response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${myApiKey}`)
     if (response.status !== 200) {
       return;
     }

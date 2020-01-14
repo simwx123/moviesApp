@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
-import { Animated, FlatList, SafeAreaView, StyleSheet, Text, TouchableOpacity, View, TextInput } from "react-native";
+import { Animated, Platform, FlatList, SafeAreaView, StyleSheet, Text, TouchableOpacity, View, TextInput } from "react-native";
 import FastImage from "react-native-fast-image";
 import { withNavigation } from 'react-navigation';
 import { useDispatch, useSelector } from 'react-redux';
@@ -26,35 +26,35 @@ const main: FunctionComponent<{}> = props => {
 
   const RenderItem = ({ ikey, items }) => {
     return (
-     
-        <View
-          style={{
-            marginHorizontal: 20,
-            marginBottom: 30,
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
-        >
-           <TouchableOpacity
-        onPress={() => {
-          props.navigation.navigate('MOVIEDETAILS', {
-            movieKey: ikey,
-          })
+
+      <View
+        style={{
+          flex: 1,
+          marginBottom: 30,
+          justifyContent: 'center',
+          alignItems: 'center'
         }}
       >
+        <TouchableOpacity
+          onPress={() => {
+            props.navigation.navigate('MOVIEDETAILS', {
+              movieKey: ikey,
+            })
+          }}
+        >
           <FastImage
             source={{ uri: `https://image.tmdb.org/t/p/w500${items.poster_path}` }}
-            style={{ height: 160, width: 160, borderRadius: 5 }}
+            style={{ height: 160, width: 160, borderRadius: 8 }}
           />
 
-<View style={{width:100}}>
-      <Text ellipsizeMode={'tail'} numberOfLines={2} style={styles.title}>{ikey+1}. {items.title}</Text>
-</View>
+          <View style={{ width: 160 }}>
+            <Text ellipsizeMode={'tail'} numberOfLines={1} style={styles.title}>{ikey + 1}. {items.title}</Text>
+          </View>
 
-         
-          </TouchableOpacity>
 
-        </View>
+        </TouchableOpacity>
+
+      </View>
     )
 
   }
@@ -69,15 +69,15 @@ const main: FunctionComponent<{}> = props => {
     var matchData = [];
 
     allMovies.forEach(element => {
-       const itemData = element.title.toUpperCase();
-        const textData = text.toUpperCase();
+      const itemData = element.title.toUpperCase();
+      const textData = text.toUpperCase();
 
-        if (textData !== "") {
-          if (itemData.indexOf(textData) > -1) {
-            matchData.push(element);
-          }
+      if (textData !== "") {
+        if (itemData.indexOf(textData) > -1) {
+          matchData.push(element);
         }
-    
+      }
+
     });
 
 
@@ -99,16 +99,18 @@ const main: FunctionComponent<{}> = props => {
     <SafeAreaView style={styles.container}>
       <Text style={{ fontSize: 30, textAlign: 'center', paddingVertical: 8 }}>Popular Movies</Text>
 
-      <TextInput
-              // ref={input => {
-              //   this.textInput = input;
-              // }}
-              style={styles.TextInputSearch}
-              placeholder="Search"
-              placeholderTextColor="#778899"
-              underlineColorAndroid="transparent"
-              onChangeText={text => searchFilterFunction(text)}
-            />
+      <View style={{ paddingHorizontal: 20 }}>
+        <TextInput
+          // ref={input => {
+          //   this.textInput = input;
+          // }}
+          style={styles.TextInputSearch}
+          placeholder="Search"
+          placeholderTextColor="#778899"
+          underlineColorAndroid="transparent"
+          onChangeText={text => searchFilterFunction(text)}
+        />
+      </View>
 
 
       <FlatList
@@ -140,11 +142,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "grey",
     textAlign: "center",
-    // height: 40, 
-    borderColor: 'gray', 
+    height: Platform.OS === 'ios' ? 40 : 0,
+    borderColor: 'gray',
     borderWidth: 1,
     borderRadius: 30,
-    marginBottom:10
+    marginBottom: 10
   },
 });
 

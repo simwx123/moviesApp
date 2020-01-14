@@ -47,10 +47,12 @@ To run the app in dev mode you'll need to generate a `debug.keystore` key. [Show
 
 Now you can run the App with `react-native run-android` or `react-native run-ios` depending on your platform.
 
+or open moviesApp/ios/movieApp.xcworkspace in Xcode and click run button to run in ios simulator.
+
 ## Made with
 - [React Native](https://facebook.github.io/react-native/)
 - [React Redux](https://react-redux.js.org/)
-- [React Navigation 4.x.x](https://reactnavigation.org/en/) (Navigation)
+- [React Navigation 3.x.x](https://reactnavigation.org/en/) (Navigation)
 - [Styled Components](https://www.styled-components.com/) (Make things beautiful)
 - [React Native Fast Image](https://github.com/DylanVann/react-native-fast-image)
 

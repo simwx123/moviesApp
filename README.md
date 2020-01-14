@@ -3,9 +3,9 @@
 An app for listing trending and popular movies from [moviedb](https://developers.themoviedb.org/3/getting-started/introduction) API.
 
 ### Screenshots
-![popular](https://i.imgur.com/TAY7mJF.png?3)
-![Details](https://i.imgur.com/4t7ZpS5.png?2)
-![Search](https://i.imgur.com/rTtsGTq.png?3)
+![popular](https://i.imgur.com/bd9Yroq.png?1)
+![Details](https://i.imgur.com/lJnjHhr.png?1)
+![Search](https://i.imgur.com/DiYnCKy.png?1)
 
 ## Getting started
 
@@ -47,10 +47,12 @@ To run the app in dev mode you'll need to generate a `debug.keystore` key. [Show
 
 Now you can run the App with `react-native run-android` or `react-native run-ios` depending on your platform.
 
+or open moviesApp/ios/movieApp.xcworkspace in Xcode and click run button to run in ios simulator.
+
 ## Made with
 - [React Native](https://facebook.github.io/react-native/)
 - [React Redux](https://react-redux.js.org/)
-- [React Navigation 4.x.x](https://reactnavigation.org/en/) (Navigation)
+- [React Navigation 3.x.x](https://reactnavigation.org/en/) (Navigation)
 - [Styled Components](https://www.styled-components.com/) (Make things beautiful)
 - [React Native Fast Image](https://github.com/DylanVann/react-native-fast-image)
 

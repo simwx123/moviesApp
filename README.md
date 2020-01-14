@@ -3,9 +3,9 @@
 An app for listing trending and popular movies from [moviedb](https://developers.themoviedb.org/3/getting-started/introduction) API.
 
 ### Screenshots
-![popular](https://i.imgur.com/TAY7mJF.png?3)
-![Details](https://i.imgur.com/4t7ZpS5.png?2)
-![Search](https://i.imgur.com/rTtsGTq.png?3)
+![popular](https://i.imgur.com/bd9Yroq.png?1)
+![Details](https://i.imgur.com/lJnjHhr.png?1)
+![Search](https://i.imgur.com/DiYnCKy.png?1)
 
 ## Getting started
 

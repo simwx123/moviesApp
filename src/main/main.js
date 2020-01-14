@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "grey",
     textAlign: "center",
-    height: Platform.OS === 'ios' ? 40 : 0,
+    height: 40,
     borderColor: 'gray',
     borderWidth: 1,
     borderRadius: 30,

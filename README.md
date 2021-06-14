@@ -56,10 +56,3 @@ or open moviesApp/ios/movieApp.xcworkspace in Xcode and click run button to run 
 - [Styled Components](https://www.styled-components.com/) (Make things beautiful)
 - [React Native Fast Image](https://github.com/DylanVann/react-native-fast-image)
 
-## About Me
-
-**Sim Wei Xiong**
-
-- [GitHub](https://github.com/simwx123)
-- [LinkedIn](https://www.linkedin.com/in/sim-wei-xiong-281876124/)
-- Email: simweixiong@gmail.com
